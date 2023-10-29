@@ -37,10 +37,7 @@ export default function PollPageTimes({ eventData, setEventData, eventQuestions,
           </form>
         </div>
       </div>
-      <div className="button-container">
-        <button type="submit" className="back-button">Back</button>
-        <button type="submit" className="next-button">Next</button>
-      </div>
+      
     </div>
   );
 }

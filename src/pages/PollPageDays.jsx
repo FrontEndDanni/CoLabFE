@@ -39,10 +39,7 @@ const PollPageDays = ({ eventData, setEventData, eventQuestions, setEventQuestio
           </form>
         </div>
       </div>
-      <div className="button-container">
-        <button type="submit" className="back-button">Back</button>
-        <button type="submit" className="next-button">Next</button>
-      </div>
+     
     </div>
   );
 };

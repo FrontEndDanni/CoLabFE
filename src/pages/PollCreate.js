@@ -49,10 +49,7 @@ export default function PollCreate({ eventData, setEventData, eventQuestions, se
           </form>
         </div>
       </div>
-      <div className="button-container">
-        <button type="submit" className="back-button">Back</button>
-        <button type="submit" className="next-button">Create Poll</button>
-      </div>
+      
     </div>
   );
 }

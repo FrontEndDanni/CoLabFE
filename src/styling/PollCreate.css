@@ -58,26 +58,16 @@ border: 1px solid #D9D9D9;
 
 
 
-/* TODO: Adjust button alignment, finish stylizing buttons (back specifically)*/
-.button-container {
-  display: flex;
-  justify-content: center; 
-}
-
-.back-button,
-.next-button {
+button {
+  display: inline-flex;
   height: 50px;
   padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
   border-radius: 30px;
   background: #FFF37D;
   border: none;
   margin-top: 50px;
-}
-
-.back-button {
-  margin-right: 5px;
-}
-
-.next-button {
-  margin-left: 5px;
 }

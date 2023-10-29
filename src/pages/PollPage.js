@@ -10,26 +10,23 @@ const PollPage = ({ eventData, setEventData, eventQuestions, setEventQuestions, 
         <div className="modal-content">
           <form>
             <label htmlFor="name">Your Name*</label><br />
-            <input type="text" id="name" name="name" placeholder="Enter your name here" 
+            <input type="text" id="name" name="name" placeholder="Your Name" 
             value={eventData.creatorname}
              onChange={(e) => {
              setEventData({ ...eventData, creatorname: e.target.value });
             }}
-            
-            
             /><br />
 
             <label htmlFor="email">Your Email*</label><br />
-            <input type="text" id="email" name="email" placeholder="Enter your email here" 
+            <input type="text" id="email" name="email" placeholder="Your Email" 
             value={eventData.creatoremail}
             onChange={(e) => {
             setEventData({ ...eventData, creatoremail: e.target.value });
                }}
-            
             /><br />
 
             <label htmlFor="pollName">Poll Name*</label><br />
-            <input type="text" id="pollName" name="pollName" placeholder="Enter your poll name here" 
+            <input type="text" id="pollName" name="pollName" placeholder="Poll Name" 
                value={eventData.eventname}
                onChange={(e) => {
                setEventData({ ...eventData, eventname: e.target.value });
@@ -54,8 +51,7 @@ const PollPage = ({ eventData, setEventData, eventQuestions, setEventQuestions, 
           </form>
         </div>
       </div>
-      <button type="submit">Next</button>
-      </div>
+    </div>
   );
 };
 
