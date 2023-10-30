@@ -57,7 +57,7 @@ export default function PollPageDays({ eventQuestions, onChange, onRemove }) {
   return (
   
         <div className="poll-page">
-        <div className="polldays-title"></div>
+        <div className="polldays-title">Enter days to suggest for your event!</div>
         <div className="polldays-modal">
         
 
