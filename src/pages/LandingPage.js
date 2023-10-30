@@ -5,8 +5,8 @@ import '../styling/LandingPage.css';
 const LandingPage = () => {
     return (
         <div className="landing-page">
-            <h2>Welcome to our App</h2>
-            <p>This is a plain landing page.</p>
+            <div className="landing-title">Simplify social planning with</div> <div className="empha">PlanPal</div>
+            <p>Easily coordinate meetups with friends</p>
         </div>
     );
 };
