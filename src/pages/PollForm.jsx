@@ -24,21 +24,26 @@ export default function PollForm() {
       setEventQuestions(newData);
     }
   };
+
+
+
   const onChange = (changedDay, times) => {
+    console.log(changedDay)
+    console.log(times)
     const newData = [...eventQuestions];
     const dayIndex = eventQuestions.findIndex(({ day }) => day === changedDay);
     console.log(dayIndex);
     if (dayIndex === -1) {
       const newDayData = {
         day: changedDay,
-        times,
+        times
       };
 
       setEventQuestions(newData.concat(newDayData));
     } else {
       newData.splice(dayIndex, 1, {
         day: changedDay,
-        times,
+        times
       });
       setEventQuestions(newData);
     }
@@ -66,10 +71,8 @@ export default function PollForm() {
     } else if (page === 2) {
       return (
         <PollPageTimes
-          eventData={eventData}
-          setEventData={setEventData}
           eventQuestions={eventQuestions}
-          setEventQuestions={setEventQuestions}
+          onChange={onChange}
         />
       );
     } else {

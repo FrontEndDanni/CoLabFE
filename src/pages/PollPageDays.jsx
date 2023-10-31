@@ -90,7 +90,7 @@ export default function PollPageDays({ eventQuestions, onChange, onRemove }) {
             style={{ background: "#FF000020" }}
             onClick={() => onRemove(item.day)}
           >
-            remove
+            {item.day}
           </button>
         </>
         // <DaySelector
