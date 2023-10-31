@@ -40,3 +40,30 @@ font-weight: bolder;
 line-height: normal;
   }
   
+  .landing-page button {
+    display: inline-flex;
+height: 50px;
+padding: 16px 32px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex-shrink: 0;
+
+  }
+
+  .landing-page h3{
+    color: #000;
+text-align: center;
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+  }
+
+.landing-page img{
+  width: 808px;
+height: 486px;
+flex-shrink: 0;
+margin:5.5vw;
+}

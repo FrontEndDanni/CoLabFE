@@ -33,13 +33,13 @@ const PollPage = ({ eventData, setEventData, eventQuestions, setEventQuestions, 
                   }}
             /><br />
 
-            <label htmlFor="timeZone">Time Zone (Optional)</label><br />
+           {/*<label htmlFor="timeZone">Time Zone (Optional)</label><br />
             <select id="timeZone" name="timeZone">
               <option value="">- Select -</option>
               <option value="Red">Red</option>
               <option value="Blue">Blue</option>
               <option value="Green">Green</option>
-            </select>
+            </select>*/}
 
             <label htmlFor="description">Description (Optional)</label><br />
             <textarea id="description" name="description" rows="4" cols="50" placeholder="Enter a more detailed description here..."
