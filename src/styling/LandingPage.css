@@ -92,9 +92,41 @@ line-height: normal;
 
 .box {
   width: 50%; /* Adjust this to your desired size */
-  border: 1px solid #000;
-  padding: 10vh;
   box-sizing: border-box;
-  margin:83px;
+  margin:64px;
+  color: #000;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: bolder;
+  line-height: normal;
   
 }
+
+.box h3{
+  color: #000;
+font-family: Lora;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+.landing1{
+  width: 460px !important;
+  height: 355px !important;
+  margin-top:0px !important;
+}
+
+.landing2{
+  width: 460px !important;
+height: 235px !important;
+  margin-top:0px !important;
+}
+
+.landing3{
+  width: 460px !important;
+height: 430px !important;
+margin-top:0px !important;
+}
+
