@@ -11,7 +11,7 @@ export default function PollForm() {
     creatoremail: "",
     eventname: "",
     polldescription: "",
-    sharesults: false,
+    shareresults: false,
   });
   const [eventQuestions, setEventQuestions] = useState([]);
   // const [eventDays, setEventDays] = useState(2);
@@ -25,7 +25,31 @@ export default function PollForm() {
     }
   };
 
+  const submitForm = () =>{
+    const questionsObject = {};
+    let counter = 1;
+    eventQuestions.forEach(({day, times})=> {
+    times.forEach((time)=> {
+      questionsObject[`question${counter}`] = {
+        questiondate: day,
+        questiontime: time
+      };
+      counter = counter +1;
+    });
 
+    })
+    const submittedObject = {'event': eventData, 'questions':questionsObject}
+    let myHeaders = new Headers();
+    myHeaders.append('Content-Type', 'application/json');
+    let requestBody = JSON.stringify(submittedObject)
+    console.log(requestBody)
+    fetch('http://3.142.245.70/api/event', {
+      method: 'POST',
+      headers: myHeaders,
+      body: requestBody
+      
+  })
+  }
 
   const onChange = (changedDay, times) => {
     console.log(changedDay)
@@ -79,9 +103,7 @@ export default function PollForm() {
       return (
         <PollCreate
           eventData={eventData}
-          setEventData={setEventData}
           eventQuestions={eventQuestions}
-          setEventQuestions={setEventQuestions}
         />
       );
     }
@@ -92,7 +114,7 @@ export default function PollForm() {
       <div className="pollForm">{PageDisplay()}</div>
       <div className="button-container">
         <button
-          disabled={page == 0}
+          disabled={page === 0}
           onClick={() => {
             setPage((currPage) => currPage - 1);
           }}
@@ -102,6 +124,7 @@ export default function PollForm() {
         <button
           onClick={() => {
             if (page === 3) {
+              submitForm()
             } else {
               setPage((currPage) => currPage + 1);
             }

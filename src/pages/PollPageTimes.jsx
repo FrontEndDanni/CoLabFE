@@ -6,7 +6,7 @@ import { Button, TimePicker } from "antd";
 const DisplayCard = ({ children, day }) => {
   return (
     <div className="modal-content">
-      <h3>Add time for {day}</h3>
+      <h3>Add time for {day[0].toUpperCase() + day.slice(1)}</h3>
       {children}
     </div>
   );
@@ -16,7 +16,6 @@ const TimeButton = ({ day, times, onChange }) => {
   console.log(times);
   // const [timesState, setTimesState] = (times);
   return (
-    //when i click i want to remove the time from times clicked
     times.map((time) => (
       <>
         <button
@@ -40,7 +39,7 @@ const TimeSelector = ({ onChange, day, times }) => {
     <TimePicker
       showSecond={false}
       showNow={false}
-      format="hh A"
+      format="h A"
       use12Hours={true}
       onChange={(newtime, datestring) => {
         if (datestring !== "") {
