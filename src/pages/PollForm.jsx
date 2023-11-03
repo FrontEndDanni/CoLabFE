@@ -3,8 +3,10 @@ import PollCreate from "./PollCreate";
 import PollPageDays from "./PollPageDays";
 import PollPageTimes from "./PollPageTimes";
 import PollPage from "./PollPage";
+import { useNavigate } from 'react-router-dom';
 
 export default function PollForm() {
+  const navigate = useNavigate();
   const [page, setPage] = useState(0);
   const [eventData, setEventData] = useState({
     creatorname: "",
@@ -25,49 +27,54 @@ export default function PollForm() {
     }
   };
 
-  const submitForm = () =>{
+  const submitForm = () => {
+
     const questionsObject = {};
     let counter = 1;
-    eventQuestions.forEach(({day, times})=> {
-    times.forEach((time)=> {
-      questionsObject[`question${counter}`] = {
-        questiondate: day,
-        questiontime: time
-      };
-      counter = counter +1;
+    eventQuestions.forEach(({ day, times }) => {
+      times.forEach((time) => {
+        questionsObject[`question${counter}`] = {
+          questiondate: day,
+          questiontime: time,
+        };
+        counter = counter + 1;
+      });
+    });
+    const submittedObject = { event: eventData, questions: questionsObject };
+    let myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+    let requestBody = JSON.stringify(submittedObject);
+    console.log(requestBody);
+    fetch("https:/api.yourplanpal.com/api/event", {
+      method: "POST",
+      headers: myHeaders,
+      body: requestBody,
+    })
+    .then(async response =>{
+      let data = await response.json();
+      navigate(`/pollresults/${data.id}/view`)
+
     });
 
-    })
-    const submittedObject = {'event': eventData, 'questions':questionsObject}
-    let myHeaders = new Headers();
-    myHeaders.append('Content-Type', 'application/json');
-    let requestBody = JSON.stringify(submittedObject)
-    console.log(requestBody)
-    fetch('http://3.142.245.70/api/event', {
-      method: 'POST',
-      headers: myHeaders,
-      body: requestBody
-      
-  })
-  }
+  };
 
   const onChange = (changedDay, times) => {
-    console.log(changedDay)
-    console.log(times)
+    console.log(changedDay);
+    console.log(times);
     const newData = [...eventQuestions];
     const dayIndex = eventQuestions.findIndex(({ day }) => day === changedDay);
     console.log(dayIndex);
     if (dayIndex === -1) {
       const newDayData = {
         day: changedDay,
-        times
+        times,
       };
 
       setEventQuestions(newData.concat(newDayData));
     } else {
       newData.splice(dayIndex, 1, {
         day: changedDay,
-        times
+        times,
       });
       setEventQuestions(newData);
     }
@@ -94,17 +101,11 @@ export default function PollForm() {
       );
     } else if (page === 2) {
       return (
-        <PollPageTimes
-          eventQuestions={eventQuestions}
-          onChange={onChange}
-        />
+        <PollPageTimes eventQuestions={eventQuestions} onChange={onChange} />
       );
     } else {
       return (
-        <PollCreate
-          eventData={eventData}
-          eventQuestions={eventQuestions}
-        />
+        <PollCreate eventData={eventData} eventQuestions={eventQuestions} />
       );
     }
   };
@@ -124,7 +125,7 @@ export default function PollForm() {
         <button
           onClick={() => {
             if (page === 3) {
-              submitForm()
+              submitForm();
             } else {
               setPage((currPage) => currPage + 1);
             }
