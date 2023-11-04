@@ -45,7 +45,7 @@ export default function PollForm() {
     myHeaders.append("Content-Type", "application/json");
     let requestBody = JSON.stringify(submittedObject);
     console.log(requestBody);
-    fetch("https:/api.yourplanpal.com/api/event", {
+    fetch("https://api.yourplanpal.com/api/event", {
       method: "POST",
       headers: myHeaders,
       body: requestBody,
