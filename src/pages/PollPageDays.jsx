@@ -5,6 +5,7 @@ import "../styling/PollPageDays.css";
 const DaySelector = ({ onChange, disabledOptions = [], disabled, value }) => {
   return (
     <select
+      className="includesList"
       disabled={disabled}
       onChange={(e) => {
         onChange(e.target.value, []);
@@ -85,12 +86,11 @@ export default function PollPageDays({ eventQuestions, onChange, onRemove }) {
       ) : null}
       {eventQuestions.map((item, idx) => (
         <>
-          <h3 className="addedDay">{item.day}</h3>
           <button className="removeButton"
             style={{ background: "#FF000020" }}
             onClick={() => onRemove(item.day)}
           >
-            {item.day}
+            {item.day[0].toUpperCase() + item.day.slice(1)}
           </button>
         </>
         // <DaySelector
