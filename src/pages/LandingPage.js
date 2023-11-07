@@ -11,15 +11,18 @@ import UseCase4 from '../media/grabdrinks.jpg';
 import UseCase5 from '../media/boardgame.jpg';
 import UseCase6 from '../media/studysession.jpg';
 
-const LandingPage = () => {
+const LandingPage = ({history}) => {
+  const handleNavigation = () => {
+    window.location.href = '/poll';
+  };
     return (
         <div className="landing-page">
             <div className="landing-title">Simplify social planning with <span className="empha">PlanPal</span></div>
             <p>Easily coordinate meetups with friends</p>
             <div className="button-container">
-                <button>
-                    <h3>Create your poll!</h3>
-                </button>
+            <button onClick={handleNavigation}>
+                <h3>Create your poll!</h3>
+            </button>
             </div>
             <img src={LandingPic} alt="Description of the image" />
 
@@ -61,7 +64,7 @@ const LandingPage = () => {
         
       </div>
        <div className="custom-box-container">
-      <h2 className="custom-title">Use Cases</h2>
+      <div className="custom-title">Use Cases</div>
       <div className="custom-row1">
         <img
 src={UseCase1}

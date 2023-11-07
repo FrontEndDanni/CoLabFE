@@ -48,8 +48,25 @@ justify-content: center;
 align-items: center;
 gap: 10px;
 flex-shrink: 0;
+background: #FFF37D;
 
   }
+  .landing-page button {
+    display: inline-flex;
+    height: 50px;
+    padding: 16px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    background: #FFF37D;
+  }
+  
+  .landing-page button:hover {
+    background: #e6d863; /* Slightly darker color when hovered over */
+    cursor: pointer; /* Changes the cursor to a pointer when hovered over */
+  }
+  
 
   .landing-page h3{
     color: #000;
@@ -147,10 +164,11 @@ margin-top:0px !important;
   justify-content: center;
   align-items: center;
   color: #000;
+  border-radius:4px;
   width: 364px !important;
 height: 217px !important;
-margin: 20px !important;
-
+margin-left: 20px !important;
+margin-right:20px !important;
 }
 
 .custom-subtitle{
