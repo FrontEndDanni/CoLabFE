@@ -4,7 +4,12 @@ import LandingPic from '../media/landingpic.png';
 import Landing1 from '../media/landing1.png';
 import Landing2 from '../media/landing2.png';
 import Landing3 from '../media/landing3.png';
-
+import UseCase1 from '../media/casual.jpg';
+import UseCase2 from '../media/dinnerparty.jpg';
+import UseCase3 from '../media/hikingtrips.jpg';
+import UseCase4 from '../media/grabdrinks.jpg';
+import UseCase5 from '../media/boardgame.jpg';
+import UseCase6 from '../media/studysession.jpg';
 
 const LandingPage = () => {
     return (
@@ -53,7 +58,38 @@ const LandingPage = () => {
         alt="Description of the image"
         className="landing3" />
         </div>
+        
       </div>
+       <div className="custom-box-container">
+      <h2 className="custom-title">Use Cases</h2>
+      <div className="custom-row1">
+        <img
+src={UseCase1}
+alt="Description of the image" className="custom-box1" />
+        <img
+src={UseCase2}
+alt="Description of the image"
+className="custom-box2"/>
+        <img
+src={UseCase3}
+alt="Description of the image"
+className="custom-box3"/>
+      </div>
+      <div className="custom-row2">
+        <img
+src={UseCase4}
+alt="Description of the image"
+className="custom-box4"/>
+        <img
+src={UseCase5}
+alt="Description of the image"
+className="custom-box5"/>
+        <img
+src={UseCase6}
+alt="Description of the image"
+className="custom-box6"/>
+      </div>
+    </div>
     </div>
         </div>
     );

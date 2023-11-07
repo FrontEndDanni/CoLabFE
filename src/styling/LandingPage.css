@@ -130,3 +130,44 @@ height: 430px !important;
 margin-top:0px !important;
 }
 
+.custom-box-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.custom-row1, .custom-row2 {
+  display: flex;
+}
+
+.custom-box1, .custom-box2, .custom-box3, .custom-box4, .custom-box5, .custom-box6 { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  width: 364px !important;
+height: 217px !important;
+margin: 20px !important;
+
+}
+
+.custom-subtitle{
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+
+.custom-title {
+  color: #000;
+text-align: center;
+font-family: Lora;
+font-size: 36px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
