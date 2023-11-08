@@ -113,7 +113,7 @@ export default function PollForm() {
   return (
     <>
       <div className="pollForm">{PageDisplay()}</div>
-      <div className="button-container">
+      <div className="nav-button-container">
         <button
           className="backbutton"
           disabled={page === 0}

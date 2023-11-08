@@ -41,7 +41,10 @@ font-weight: bolder;
 line-height: normal;
   }
   
- 
+  .button-container {
+    display: flex;
+    justify-content: space-around; 
+  }
   .landing-page button {
     display: inline-flex;
     height: 50px;
