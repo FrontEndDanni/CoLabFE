@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Link } from 'react-router-dom';
 import '../styling/PollPage.css';
 
 const PollPage = ({ eventData, setEventData, eventQuestions, setEventQuestions, eventDays, setEventDays }) => {

@@ -42,7 +42,13 @@ export default function PollCreate({eventData, eventQuestions}) {
               </select>
   
               <label htmlFor="description">Description (Optional)</label><br />
-              <textarea id="description" name="description" rows="4" cols="50" placeholder="Enter a more detailed description here..."></textarea><br />
+              <textarea id="description" 
+              name="description" 
+              rows="4" 
+              cols="50" 
+              placeholder="Enter a more detailed description here..."
+              style={{ resize: 'none' }}
+              ></textarea><br />
             </form>
           </div>
         </div>

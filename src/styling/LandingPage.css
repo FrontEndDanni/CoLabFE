@@ -41,17 +41,7 @@ font-weight: bolder;
 line-height: normal;
   }
   
-  .landing-page button {
-    display: inline-flex;
-height: 50px;
-padding: 16px 32px;
-justify-content: center;
-align-items: center;
-gap: 10px;
-flex-shrink: 0;
-background: #FFF37D;
-
-  }
+ 
   .landing-page button {
     display: inline-flex;
     height: 50px;
@@ -60,6 +50,8 @@ background: #FFF37D;
     align-items: center;
     gap: 10px;
     flex-shrink: 0;
+    border:none;
+    border-radius: 30px;
     background: #FFF37D;
   }
   

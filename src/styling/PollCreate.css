@@ -54,20 +54,6 @@ align-items: center;
 gap: 10px;
 border-radius: 4px;
 border: 1px solid #D9D9D9;
+resize:none;
 }
 
-
-
-button {
-  display: inline-flex;
-  height: 50px;
-  padding: 16px 32px;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  flex-shrink: 0;
-  border-radius: 30px;
-  background: #FFF37D;
-  border: none;
-  margin-top: 50px;
-}

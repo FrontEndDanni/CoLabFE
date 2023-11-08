@@ -15,7 +15,6 @@
 .poll-page {
   text-align: center;
   padding: 100px;
-  margin-bottom: 80px;
 }
 
 .pollpage-modal {
@@ -31,13 +30,13 @@
 }
 
 
-form {
+.poll-page form {
   display: flex;
   flex-direction: column;
   padding:50px;
 }
 
-form label {
+.poll-page form label {
   margin-top: 6px;
   margin-bottom: 6px;  text-align: left;
   color: #000;
@@ -48,7 +47,7 @@ form label {
 }
   /*TODO: Figure out styling issues with dropdown menu*/
 
-form input,
+.poll-page form input,
 form textarea,
 select {
   display: flex;
@@ -64,17 +63,37 @@ font-family:poppins;
 margin-bottom:25px;
 
 }
+  /*BACK AND NEXT BUTTONS FOUND HERE!*/
 
-button {
+.nextbutton {
   display: inline-flex;
-  height: 50px;
-  padding: 16px 32px;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  flex-shrink: 0;
-  border-radius: 30px;
-  background: #FFF37D;
-  border: none;
-  margin-top: 50px;
+padding: 16px 32px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+flex-shrink: 0;
+border:none;
+border-radius: 30px;
+background: #FFF37D;
+color: #000;
+
+  /*BUTTON TEXT*/
+text-align: center;
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: bolder;
+}
+
+.nextbutton span{
+  text-align: center;
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: bolder;
+}
+
+.nextbutton:hover {
+  background: #e6d863; /* Slightly darker color when hovered over */
+  cursor: pointer; /* Changes the cursor to a pointer when hovered over */
 }
