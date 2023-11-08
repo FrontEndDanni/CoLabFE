@@ -64,11 +64,15 @@ margin-bottom:25px;
 
 }
   /*BACK AND NEXT BUTTONS FOUND HERE!*/
-
+  .button-container {
+    display: flex;
+    justify-content: space-around; 
+    margin-top:-10vh;
+  }
+  
 .nextbutton {
   display: inline-flex;
 padding: 16px 32px;
-justify-content: center;
 align-items: center;
 gap: 8px;
 flex-shrink: 0;
@@ -85,15 +89,31 @@ font-style: normal;
 font-weight: bolder;
 }
 
-.nextbutton span{
-  text-align: center;
+.nextbutton:hover {
+  background: #e6d863; /* Slightly darker color when hovered over */
+  cursor: pointer; /* Changes the cursor to a pointer when hovered over */
+}
+
+.backbutton {
+  display: inline-flex;
+padding: 16px 32px;
+align-items: center;
+gap: 8px;
+flex-shrink: 0;
+border:none;
+border-radius: 30px;
+background: #ffffff;
+color: #000;
+
+  /*BUTTON TEXT*/
+text-align: center;
 font-family: Poppins;
 font-size: 20px;
 font-style: normal;
 font-weight: bolder;
 }
 
-.nextbutton:hover {
-  background: #e6d863; /* Slightly darker color when hovered over */
-  cursor: pointer; /* Changes the cursor to a pointer when hovered over */
+.backbutton:disabled{
+  opacity: 0.6;
+  cursor: not-allowed;
 }
