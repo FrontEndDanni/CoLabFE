@@ -69,6 +69,7 @@ export default function PollPageDays({ eventQuestions, onChange, onRemove }) {
             defaultValue="sunday"
           />
           <button
+          className="pickday-button"
             onClick={() => {
               onChange(valueToAdd, []);
               setValueToAdd(
@@ -86,7 +87,6 @@ export default function PollPageDays({ eventQuestions, onChange, onRemove }) {
       {eventQuestions.map((item, idx) => (
         <>
           <button className="removeButton"
-            style={{ background: "#FF000020" }}
             onClick={() => onRemove(item.day)}
           >
             {item.day[0].toUpperCase() + item.day.slice(1)}
