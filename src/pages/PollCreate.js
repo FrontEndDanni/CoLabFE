@@ -33,14 +33,6 @@ export default function PollCreate({eventData, eventQuestions}) {
               <label htmlFor="name">Poll Name*</label><br />
               <input type="text" id="name" name="name" placeholder="Enter your name here" /><br />
   
-              <label htmlFor="timeZone">Time Zone (Optional)</label><br />
-              <select id="timeZone" name="timeZone">
-                <option value="">- Select -</option>
-                <option value="Red">Red</option>
-                <option value="Blue">Blue</option>
-                <option value="Green">Green</option>
-              </select>
-  
               <label htmlFor="description">Description (Optional)</label><br />
               <textarea id="description" 
               name="description" 

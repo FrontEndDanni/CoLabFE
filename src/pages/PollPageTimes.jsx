@@ -5,7 +5,7 @@ import { Button, TimePicker } from "antd";
 
 const DisplayCard = ({ children, day }) => {
   return (
-    <div className="polltimes-modal">
+    <div>
       <h3>Add time for {day[0].toUpperCase() + day.slice(1)}</h3>
       {children}
     </div>
@@ -69,7 +69,7 @@ export default function PollPageTimes({
 
   return (
     <div className="poll-page">
-      <div className="polldays-title"></div>
+      <div className="polltimes-title">Nice! Now suggest some times</div>
       <div className="polltimes-modal">
         {eventQuestions.map(({ day, times }) => (
           <>
