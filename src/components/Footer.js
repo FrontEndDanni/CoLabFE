@@ -1,9 +1,12 @@
 import React from 'react';
 import styled from "styled-components";
+import PlanPalLogo from '../media/planpalw.svg';
 
 const Footer = () => {
     return (
-        <Div26>PlanPal</Div26>
+        <Div26>
+          <img src={PlanPalLogo}/>
+        </Div26>
     );
 }
 const Div26 = styled.div`
@@ -16,10 +19,10 @@ const Div26 = styled.div`
   background-color: #68627b;
   margin-top: 65px;
   width: 100%;
-  padding-top: 34px;
+  height:100px;
   padding-right: 20px;
-  padding-bottom: 158px;
-  padding-left: 20px;
+  padding-top:32px;
+  padding-left: 32px;
   @media (max-width: 991px) {
     font-size: 40px;
     text-wrap: initial;

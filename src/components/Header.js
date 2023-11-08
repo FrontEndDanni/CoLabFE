@@ -11,7 +11,7 @@ const Header = () => {
     <Div2 onClick={navigateToHome}>
       <img
         src={PlanPalLogo}
-        alt="Description of the image"
+        alt="PlanPal Logo"
         style={{ width: '133px', height: '35px', cursor: 'pointer' }}
       />
     </Div2>
