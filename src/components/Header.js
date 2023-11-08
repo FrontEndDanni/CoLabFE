@@ -1,19 +1,27 @@
 import React from 'react';
 import styled from "styled-components";
+import PlanPalLogo from '../media/planpal.svg';
 
 const Header = () => {
-    return (
-        <Div2>PlanPal</Div2>
-    );
-}
+  const navigateToHome = () => {
+    window.location.href = '/';
+  };
+
+  return (
+    <Div2 onClick={navigateToHome}>
+      <img
+        src={PlanPalLogo}
+        alt="Description of the image"
+        style={{ width: '133px', height: '35px', cursor: 'pointer' }}
+      />
+    </Div2>
+  );
+};
+
 const Div2 = styled.div`
-  color: #000;
-  font-family: Lora, sans-serif;
-  font-size: 48px;
-  font-weight: 700;
   align-self: stretch;
   text-wrap: nowrap;
-  border-bottom: 1px solid #f5f5f5;
+  border-bottom: 1px solid #F5F5F5;
   box-shadow: 0px -3px 21px 0px rgba(0, 0, 0, 0.25);
   background-color: #fff;
   width: 100%;
