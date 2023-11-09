@@ -2,6 +2,9 @@ import * as React from "react";
 import '../styling/PollPage.css';
 
 const PollPage = ({ eventData, setEventData, eventQuestions, setEventQuestions, eventDays, setEventDays }) => {
+  
+  
+  
   return (
     <div className="poll-page">
       <div className="pollpage-title">Poll Details</div>

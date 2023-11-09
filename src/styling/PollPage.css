@@ -48,7 +48,6 @@
   /*TODO: Figure out styling issues with dropdown menu*/
 
 .poll-page form input,
-form textarea,
 select {
   display: flex;
 width: 100%;
@@ -63,6 +62,21 @@ font-family:poppins;
 margin-bottom:25px;
 
 }
+
+form textarea{
+  display: flex;
+width: 100%;
+height: 179px;
+padding: 15px 16px;
+align-items: center;
+gap: 10px;
+border-radius: 4px;
+border: 1px solid #D9D9D9;
+font-size:18px;
+font-family:poppins;
+margin-bottom:25px;
+}
+
   /*BACK AND NEXT BUTTONS FOUND HERE!*/
   .nav-button-container {
     display: flex;

@@ -15,7 +15,9 @@ export default function PollForm() {
     polldescription: "",
     shareresults: false,
   });
+  
   const [eventQuestions, setEventQuestions] = useState([]);
+  const [disableNext, setDisableNext] = useState(true);
 
   const onRemove = (changedDay) => {
     const newData = [...eventQuestions];
