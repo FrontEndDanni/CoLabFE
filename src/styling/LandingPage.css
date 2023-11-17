@@ -9,6 +9,8 @@
     align-items: center;
     margin-top:15vh;
   }
+
+  
 .landing-title{
   color: #000;
   text-align: center;
@@ -184,4 +186,77 @@ font-size: 36px;
 font-style: normal;
 font-weight: 600;
 margin-bottom:-3vh;
+}
+
+@media (max-width: 768px) {
+  .landing-page {
+    padding: 40px; /* Adjust padding for smaller screens */
+    margin-top: 10vh; /* Reduce top margin for smaller screens */
+  }
+
+  .landing-title {
+    font-size: 36px; /* Decrease font size for smaller screens */
+  }
+
+  .empha {
+    font-size: 36px; /* Decrease font size for smaller screens */
+  }
+
+  .landing-page h2 {
+    font-size: 2rem; /* Decrease heading font size */
+    margin-bottom: 15px;
+  }
+
+  .landing-page p {
+    font-size: 18px; /* Decrease paragraph font size */
+  }
+
+  .landing-page button {
+    height: 40px; /* Decrease button height for smaller screens */
+    padding: 12px 24px; /* Adjust button padding */
+    font-size: 16px; /* Decrease button font size */
+  }
+
+  .landing-page h3 {
+    font-size: 18px; /* Decrease font size for smaller screens */
+  }
+
+  .landing-page img {
+    width: 100%; /* Make the image responsive to the container */
+    height: auto;
+    margin: 5.5vw 0; /* Adjust margin */
+  }
+
+  .landing-page h4 {
+    width: 100%; /* Make the heading responsive */
+    font-size: 28px; /* Decrease font size for smaller screens */
+  }
+
+  /* Adjustments for the box layout */
+  .container, .custom-box-container {
+    flex-direction: column; /* Change layout to vertical stacking */
+  }
+
+  .row {
+    flex-direction: column; /* Change layout to vertical stacking */
+    margin: 32px 0; /* Adjust margin */
+  }
+
+  .box {
+    width: 100%; /* Make boxes take full width */
+    margin: 24px 0; /* Adjust margin */
+  }
+
+  .custom-box1,
+  .custom-box2,
+  .custom-box3,
+  .custom-box4,
+  .custom-box5,
+  .custom-box6 {
+    width: 100%; /* Make boxes take full width */
+    height: auto; /* Adjust height */
+    margin: 20px 0; /* Adjust margin */
+  }
+  
+
 }
