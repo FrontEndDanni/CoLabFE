@@ -10,8 +10,6 @@
   padding-right:45vw;
 }
 
-  /*TODO: Styling adjustments on modal*/
-
 .poll-page {
   text-align: center;
   padding: 100px;
@@ -132,4 +130,87 @@ font-weight: bolder;
 .backbutton:disabled{
   opacity: 0.6;
   cursor: not-allowed;
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .pollpage-title {
+    font-size: 28px;
+    padding-bottom: 30px;
+    padding-right: 0;
+  }
+
+  .pollpage-modal {
+    width: 90%; /* Adjust width for smaller screens */
+    height: auto; /* Let the height adjust based on content */
+    padding: 30px; /* Adjust padding */
+  }
+
+  .poll-page form {
+    padding: 20px; /* Adjust form padding */
+  }
+
+  .poll-page form label {
+    font-size: 20px;
+  }
+
+  .poll-page form input,
+  .poll-page form textarea {
+    height: auto; /* Let the height adjust based on content */
+    margin-bottom: 15px;
+  }
+
+  .nav-button-container {
+    margin-top: 0; /* Adjust margin for smaller screens */
+  }
+
+  .nextbutton,
+  .backbutton {
+    padding: 12px 24px; /* Adjust button padding */
+    font-size: 16px; /* Adjust button font size */
+  }
+}
+@media screen and (max-width: 667px) {
+
+  .poll-page {
+    text-align: center;
+    padding: 40px;
+  }
+  .pollpage-title {
+    font-size: 24px;
+    padding-bottom: 20px;
+    padding-right: 0;
+  }
+
+  .pollpage-modal {
+    width: 75vw;
+    height: auto;
+    padding-left:0;
+    margin-right:100px;
+  }
+
+  .poll-page form {
+    padding: 10px;
+  }
+
+  .poll-page form label {
+    font-size: 18px;
+  }
+
+  .poll-page form input,
+  .poll-page form textarea {
+    height: auto;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  .nav-button-container {
+    margin-top: 0;
+  }
+
+  .nextbutton,
+  .backbutton {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
 }
