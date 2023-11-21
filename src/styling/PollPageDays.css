@@ -112,3 +112,48 @@ border: 1px solid #D9D9D9;
     cursor: pointer;
   }
 
+  @media screen and (max-width: 667px) {
+
+    .poll-page {
+      text-align: center;
+      padding: 40px;
+    }
+    .polldays-title {
+      font-size: 24px;
+      padding-bottom: 20px;
+      padding-right: 0;
+    }
+  
+    .polldays-modal {
+      width: 85%;
+      height: auto;
+      padding-left:0;
+      margin-right:100px;
+    }
+  
+    .poll-page form {
+      padding: 10px;
+    }
+  
+    .poll-page form label {
+      font-size: 18px;
+    }
+  
+    .poll-page form input,
+    .poll-page form textarea {
+      height: auto;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+  
+    .nav-button-container {
+      margin-top: 0;
+    }
+  
+    .nextbutton,
+    .backbutton {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  }
+
