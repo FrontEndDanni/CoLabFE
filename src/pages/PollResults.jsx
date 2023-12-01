@@ -64,8 +64,12 @@ const DayTimeDisplay = ({ questions, largest }) => {
               {Object.entries(times).map(([time, answers]) => (
               <div>
               <button className='timeButton'>{time}</button>
-              {Object.entries(answers).map(([answer, responses])=>(       
+              {Object.entries(answers).map(([answer, responses])=>(    
+                <>
+                {responses[0]&&
                 <h5>{responses[1][0]}</h5>
+                }
+                </>
               ))}
               </div>
 
